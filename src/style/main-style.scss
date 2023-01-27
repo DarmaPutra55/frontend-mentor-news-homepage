@@ -1,0 +1,378 @@
+$layout-breakpoint-sm: 380px;
+$layout-breakpoint-md: 930px;
+$soft-red: hsl(5, 85%, 63%);
+$soft-orange: hsl(35, 77%, 62%);
+$soff-white: hsl(36, 100%, 99%);
+$grayish-blue: hsl(233, 8%, 79%);
+$dark-grayish-blue: hsl(236, 13%, 42%);
+$very-dark-blue: hsl(240, 100%, 5%);
+#root {
+  height: 100%;
+  font-family: "Inter";
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.shadow {
+  display: none;
+}
+
+.shadow-activate {
+  display: inline;
+  background: rgba($color: #000000, $alpha: 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 0.6fr;
+  gap: 10px;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "hero-img hero-img"
+    "hero-title hero-description";
+  gap: 15px;
+}
+
+.hero-img {
+  grid-area: hero-img;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.hero-title {
+  grid-area: hero-title;
+  h1 {
+    font-weight: 800;
+    font-size: clamp(1.5rem, 13vw, 3.5rem);
+    margin: 0;
+  }
+}
+
+.hero-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-area: hero-description;
+  p {
+    line-height: 30px;
+    font-weight: 400;
+    font-size: 1rem;
+    color: $dark-grayish-blue;
+    margin: 0;
+  }
+}
+
+.sidebar {
+  grid-area: sidebar;
+  padding: 20px;
+  background-color: $very-dark-blue;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+    color: hsl(35, 77%, 62%);
+  }
+}
+
+.sidebar-content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  & > * {
+    flex: 1 1;
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      padding: 10px;
+      text-decoration: none;
+      color: $dark-grayish-blue;
+      background-color: white;
+      font-size: 1.05rem;
+      font-weight: 400;
+
+      &:hover {
+        color: $soft-red;
+      }
+    }
+  }
+}
+
+.transparent-button {
+  background-color: transparent;
+  border: none;
+  height: fit-content;
+}
+
+.read-more-button {
+  background-color: $soft-red;
+  max-width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  cursor: pointer;
+
+  p {
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+  }
+
+  &:hover {
+    background-color: $very-dark-blue;
+  }
+}
+
+.page {
+  min-height: 750px;
+  width: calc(min(1100px, 100%));
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 60px;
+  grid-template-areas:
+    "header header header"
+    "main main sidebar"
+    "footer footer footer";
+  padding: 20px 15px;
+}
+
+.sidemenu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.sidebar-content-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  hr {
+    width: 100%;
+    background-color: $grayish-blue;
+    height: 1px;
+    border: none;
+  }
+}
+
+.sidebar-content {
+  flex-grow: 1;
+  color: $soff-white;
+
+  &:hover {
+    cursor: pointer;
+    h3 {
+      color: $soft-orange;
+    }
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: $grayish-blue;
+  }
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  &:hover {
+    cursor: pointer;
+    .footer-description {
+      h3 {
+        color: $soft-red;
+      }
+    }
+  }
+}
+
+.footer-img {
+  img {
+    max-height: 150px;
+  }
+}
+
+.footer-description {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  & > * {
+    //All direct childern
+    flex: 1 1;
+  }
+  h2 {
+    color: $grayish-blue;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  h3 {
+    color: $very-dark-blue;
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin: 0;
+  }
+  p {
+    color: $dark-grayish-blue;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: $layout-breakpoint-md) {
+  //Mobile
+  .close-sidemenu-button-container {
+    padding: 10px;
+    margin-bottom: 20px;
+    min-width: 180px;
+    display: flex;
+    justify-content: right;
+
+    button {
+      padding: 20px;
+    }
+  }
+
+  .open-sidemenu-button-container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 100%;
+
+    button {
+      padding: 20px;
+    }
+  }
+
+  .sidemenu-container {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 55%;
+    max-width: 0;
+    background-color: white;
+    overflow: hidden;
+    transition: all 400ms;
+  }
+
+  .side-menu-activate {
+    max-width: 100%;
+  }
+
+  .nav-container {
+    padding: 10px 20px;
+    height: 100%;
+    align-items: baseline;
+
+    nav {
+      min-height: 200px;
+      flex-direction: column;
+    }
+  }
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .page {
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "sidebar sidebar sidebar"
+      "footer footer footer";
+  }
+
+  .main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "hero-img hero-img"
+      "hero-title hero-title"
+      "hero-description hero-description";
+    gap: 15px;
+  }
+
+  .hero-title {
+    h1 {
+      margin: 4px;
+      //font-size: 3rem;
+    }
+  }
+
+  .container {
+    align-items: baseline;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: $layout-breakpoint-md) {
+  //Desktop
+
+  .hide-on-desktop {
+    display: none !important;
+  }
+}

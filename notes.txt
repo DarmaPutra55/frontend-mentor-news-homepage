@@ -1,0 +1,15 @@
+For resize:
+  
+const handleWindowResize = useCallback(() => {
+   if (window.innerWidth > 375 && isOpen) {
+    onClose();
+   }
+}, [isOpen]); //Put isOpen dependencies here
+
+useEffect(() => {
+   window.addEventListener("resize", handleWindowResize);
+
+   return () => {
+     window.removeEventListener("resize", handleWindowResize);
+   };
+ }, [handleWindowResize]);
