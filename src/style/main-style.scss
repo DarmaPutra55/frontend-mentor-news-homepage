@@ -16,6 +16,7 @@ body {
   margin: 0;
   width: 100%;
   height: 100vh;
+  min-width: 320px;
 }
 
 .shadow {
@@ -42,7 +43,7 @@ body {
 .header {
   grid-area: header;
   display: grid;
-  grid-template-columns: 1fr 0.6fr;
+  grid-template-columns: 1fr 0.8fr;
   gap: 10px;
 }
 
@@ -50,7 +51,7 @@ body {
   grid-area: main;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: auto 200px;
   grid-template-areas:
     "hero-img hero-img"
     "hero-title hero-description";
@@ -112,6 +113,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  max-height: 150px;
   & > * {
     flex: 1 1;
   }
@@ -177,7 +179,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, auto);
-  gap: 60px;
+  gap: 40px;
   grid-template-areas:
     "header header header"
     "main main sidebar"
@@ -253,25 +255,23 @@ body {
 
   & > * {
     //All direct childern
-    flex: 1 1;
+    margin: 5px 0;
   }
   h2 {
     color: $grayish-blue;
     font-size: 2rem;
     font-weight: 700;
-    margin: 0;
   }
   h3 {
     color: $very-dark-blue;
     font-size: 1.15rem;
     font-weight: 800;
-    margin: 0;
   }
   p {
     color: $dark-grayish-blue;
     font-size: 1rem;
     font-weight: 400;
-    margin: 0;
+    line-height: 25px;
   }
 }
 
@@ -344,7 +344,7 @@ body {
     grid-area: main;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
+    grid-template-rows: repeat(2, auto);
     grid-template-areas:
       "hero-img hero-img"
       "hero-title hero-title"

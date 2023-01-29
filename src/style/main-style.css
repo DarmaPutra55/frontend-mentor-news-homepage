@@ -8,6 +8,7 @@ body {
   margin: 0;
   width: 100%;
   height: 100vh;
+  min-width: 320px;
 }
 
 .shadow {
@@ -42,7 +43,7 @@ body {
   grid-area: header;
   display: -ms-grid;
   display: grid;
-      grid-template-columns: 1fr 0.6fr;
+      grid-template-columns: 1fr 0.8fr;
   gap: 10px;
 }
 
@@ -54,7 +55,7 @@ body {
   display: -ms-grid;
   display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto;
+      grid-template-rows: auto 200px;
       grid-template-areas: "hero-img hero-img" "hero-title hero-description";
   gap: 15px;
 }
@@ -152,6 +153,7 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 10px;
+  max-height: 150px;
 }
 
 .footer > * {
@@ -239,7 +241,7 @@ body {
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: (auto)[3];
       grid-template-rows: repeat(3, auto);
-  gap: 60px;
+  gap: 40px;
       grid-template-areas: "header header header" "main main sidebar" "footer footer footer";
   padding: 20px 15px;
 }
@@ -338,30 +340,26 @@ body {
 }
 
 .footer-description > * {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1;
-          flex: 1 1;
+  margin: 5px 0;
 }
 
 .footer-description h2 {
   color: #c5c6ce;
   font-size: 2rem;
   font-weight: 700;
-  margin: 0;
 }
 
 .footer-description h3 {
   color: #00001a;
   font-size: 1.15rem;
   font-weight: 800;
-  margin: 0;
 }
 
 .footer-description p {
   color: #5d5f79;
   font-size: 1rem;
   font-weight: 400;
-  margin: 0;
+  line-height: 25px;
 }
 
 @media only screen and (max-width: 930px) {
@@ -441,8 +439,8 @@ body {
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
+    -ms-grid-rows: (auto)[2];
+        grid-template-rows: repeat(2, auto);
         grid-template-areas: "hero-img hero-img" "hero-title hero-title" "hero-description hero-description";
     gap: 15px;
   }
