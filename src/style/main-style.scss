@@ -70,7 +70,7 @@ body {
   grid-area: hero-title;
   h1 {
     font-weight: 800;
-    font-size: clamp(1.5rem, 13vw, 3.5rem);
+    font-size: clamp(1.5rem, 13vw, 3rem);
     margin: 0;
   }
 }
@@ -113,7 +113,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  max-height: 150px;
+  max-height: 180px;
   & > * {
     flex: 1 1;
   }
