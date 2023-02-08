@@ -1,11 +1,13 @@
 $layout-breakpoint-sm: 380px;
-$layout-breakpoint-md: 930px;
+$layout-breakpoint-md: 800px;
 $soft-red: hsl(5, 85%, 63%);
 $soft-orange: hsl(35, 77%, 62%);
 $soff-white: hsl(36, 100%, 99%);
 $grayish-blue: hsl(233, 8%, 79%);
 $dark-grayish-blue: hsl(236, 13%, 42%);
 $very-dark-blue: hsl(240, 100%, 5%);
+$normal-font-size: clamp(0.95rem, 1.5vw, 1rem);
+
 #root {
   height: 100%;
   font-family: "Inter";
@@ -70,7 +72,7 @@ body {
   grid-area: hero-title;
   h1 {
     font-weight: 800;
-    font-size: clamp(1.5rem, 13vw, 3rem);
+    font-size: clamp(2.8rem, 5vw, 3rem);
     margin: 0;
   }
 }
@@ -83,7 +85,7 @@ body {
   p {
     line-height: 30px;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: $normal-font-size;
     color: $dark-grayish-blue;
     margin: 0;
   }
@@ -113,7 +115,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  max-height: 180px;
+  max-height: 120px;
   & > * {
     flex: 1 1;
   }
@@ -221,7 +223,7 @@ body {
     font-size: 1.25rem;
   }
   p {
-    font-size: 1rem;
+    font-size: $normal-font-size;
     font-weight: 400;
     color: $grayish-blue;
   }
@@ -244,7 +246,7 @@ body {
 
 .footer-img {
   img {
-    max-height: 150px;
+    max-height: 120px;
   }
 }
 
@@ -252,26 +254,28 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  justify-content: space-between;
 
   & > * {
     //All direct childern
-    margin: 5px 0;
+    margin: 0;
   }
   h2 {
     color: $grayish-blue;
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 1.5vw, 2rem);
     font-weight: 700;
   }
   h3 {
     color: $very-dark-blue;
-    font-size: 1.15rem;
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
     font-weight: 800;
   }
   p {
     color: $dark-grayish-blue;
-    font-size: 1rem;
+    font-size: $normal-font-size;
     font-weight: 400;
-    line-height: 25px;
+    line-height: clamp(20px, 1.5vw, 25px);
+    overflow: auto;
   }
 }
 
@@ -314,7 +318,7 @@ body {
   }
 
   .side-menu-activate {
-    max-width: 100%;
+    max-width: 300px;
   }
 
   .nav-container {

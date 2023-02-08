@@ -7,7 +7,7 @@ import side_menu_open_icon from "../assets/images/icon-menu.svg";
 export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const handleWindowResize = useCallback(() => {
-    if (window.innerWidth > 375 && isOpen) {
+    if (window.innerWidth > 800 && isOpen) {
       onClose();
     }
   }, [isOpen]);
