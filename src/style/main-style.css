@@ -103,7 +103,7 @@ body {
 .hero-description p {
   line-height: 30px;
   font-weight: 400;
-  font-size: clamp(0.95rem, 1.5vw, 1rem);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
   color: #5d5f79;
   margin: 0;
 }
@@ -153,7 +153,7 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 10px;
-  max-height: 120px;
+  max-height: 150px;
 }
 
 .footer > * {
@@ -300,7 +300,7 @@ body {
 }
 
 .sidebar-content p {
-  font-size: clamp(0.95rem, 1.5vw, 1rem);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
   font-weight: 400;
   color: #c5c6ce;
 }
@@ -325,7 +325,7 @@ body {
 }
 
 .footer-img img {
-  max-height: 120px;
+  max-height: 150px;
 }
 
 .footer-description {
@@ -348,19 +348,19 @@ body {
 
 .footer-description h2 {
   color: #c5c6ce;
-  font-size: clamp(1.6rem, 1.5vw, 2rem);
+  font-size: clamp(1.4rem, 1.5vw, 2rem);
   font-weight: 700;
 }
 
 .footer-description h3 {
   color: #00001a;
-  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
   font-weight: 800;
 }
 
 .footer-description p {
   color: #5d5f79;
-  font-size: clamp(0.95rem, 1.5vw, 1rem);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
   font-weight: 400;
   line-height: clamp(20px, 1.5vw, 25px);
   overflow: auto;

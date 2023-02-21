@@ -6,7 +6,7 @@ $soff-white: hsl(36, 100%, 99%);
 $grayish-blue: hsl(233, 8%, 79%);
 $dark-grayish-blue: hsl(236, 13%, 42%);
 $very-dark-blue: hsl(240, 100%, 5%);
-$normal-font-size: clamp(0.95rem, 1.5vw, 1rem);
+$normal-font-size: clamp(0.9rem, 1.5vw, 1rem);
 
 #root {
   height: 100%;
@@ -115,7 +115,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  max-height: 120px;
+  max-height: 150px;
   & > * {
     flex: 1 1;
   }
@@ -246,7 +246,7 @@ body {
 
 .footer-img {
   img {
-    max-height: 120px;
+    max-height: 150px;
   }
 }
 
@@ -262,12 +262,12 @@ body {
   }
   h2 {
     color: $grayish-blue;
-    font-size: clamp(1.6rem, 1.5vw, 2rem);
+    font-size: clamp(1.4rem, 1.5vw, 2rem);
     font-weight: 700;
   }
   h3 {
     color: $very-dark-blue;
-    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    font-size: clamp(0.95rem, 1.5vw, 1.15rem);
     font-weight: 800;
   }
   p {
